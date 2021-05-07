@@ -16,7 +16,7 @@ export const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => 
             Collection of auto-validated Typescript type challenges
         </div>
         <div className={styles.buttons}>
-            <a href="/challenges">
+            <a href="/challenges/">
                 <div className={styles.button}>
                 View Challenges
                 </div>
@@ -28,7 +28,7 @@ export const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => 
             </a>
         </div>
         <div className={styles.about}>
-            <a href="/about">
+            <a href="/about/">
                 What's a "type challenge"?
             </a>
         </div>
