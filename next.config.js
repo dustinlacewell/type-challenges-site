@@ -14,4 +14,4 @@ module.exports = withPlugins([
         },
     }],
     [withMDX, {pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx']}],
-])
+], {trailingSlash: true})
