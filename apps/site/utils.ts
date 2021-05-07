@@ -56,7 +56,7 @@ export const getPuzzles = async () => {
     return puzzles
 }
 
-const QUESTION_ROOT = "/home/ldlework/ext/type-challenges/questions/"
+const QUESTION_ROOT = process.env.QUESTION_ROOT
 
 export const getQuestionPaths = async () => {
     const paths = await fs.readdir(QUESTION_ROOT);
