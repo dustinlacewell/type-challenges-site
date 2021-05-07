@@ -1,0 +1,37 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    font-family: 'Source Sans Pro';
+    padding-left: 1em;
+    padding-bottom: 1em;
+
+    .banner {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding-left: 1em;
+        padding-top: 1em;
+        margin-bottom: 1em;
+
+        color: #4265af;
+
+        div:first-child {
+            font-size: 1.5em;
+        }
+
+        .icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: lightgreen;
+            font-size: 3em;
+        }
+    }
+
+    .markdown {
+        padding-left: 2em;
+    }
+}

@@ -1,30 +1,15 @@
 {
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     ".eslintrc.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
-  "npmScope": "type-tetris",
+  "affected": { "defaultBase": "master" },
+  "npmScope": "site",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
-  "projects": {
-    "type-tetris": {
-      "tags": []
-    },
-    "type-tetris-e2e": {
-      "tags": [],
-      "implicitDependencies": ["type-tetris"]
-    }
-  }
+  "projects": { "site": { "tags": [] } }
 }

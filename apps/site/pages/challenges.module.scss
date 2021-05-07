@@ -1,0 +1,42 @@
+.index {
+    display: flex;
+    flex-direction: column;
+
+    .buttons {
+        color: black;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        padding-left: 1em;
+
+        .button {
+            cursor: default;
+            padding: 1em;
+
+            &:hover {
+                color: #007acc;
+                outline: 1px solid rgba(255, 0, 0, 0.1);
+            }
+        }
+
+        .selected {
+            color: #007acc;
+            text-decoration: underline;
+            -webkit-text-decoration-color: salmon;
+            text-decoration-color: salmon;
+            -webkit-text-decoration-style: wavy;
+            text-decoration-style: wavy;
+        }
+    }
+
+    .link {
+        a {
+            color: black;
+            text-decoration: none;
+
+            &:hover > div > div:first-child {
+                color: #007acc !important;
+            }
+        }
+    }
+}

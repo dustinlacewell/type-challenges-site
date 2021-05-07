@@ -1,11 +1,11 @@
 {
   "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
+  "ignorePatterns": ["**/*.txt", "!**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
-        "project": ["apps/type-tetris/tsconfig(.*)?.json"]
+        "project": ["apps/site/tsconfig(.*)?.json"]
       },
       "rules": {}
     },

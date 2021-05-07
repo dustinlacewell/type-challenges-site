@@ -1,3 +1,1 @@
-module.exports = {
-  projects: ['<rootDir>/apps/type-tetris'],
-};
+module.exports = {projects: ['<rootDir>/apps/site']};

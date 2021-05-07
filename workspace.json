@@ -1,96 +1,52 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
-  "defaultProject": "type-tetris",
+  "cli": { "defaultCollection": "@nrwl/next" },
+  "defaultProject": "site",
   "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    }
+    "@nrwl/react": { "application": { "babel": true } },
+    "@nrwl/next": { "application": { "style": "scss", "linter": "eslint" } }
   },
   "projects": {
-    "type-tetris": {
-      "root": "apps/type-tetris",
-      "sourceRoot": "apps/type-tetris",
+    "site": {
+      "root": "apps/site",
+      "sourceRoot": "apps/site",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "root": "apps/type-tetris",
-            "outputPath": "dist/apps/type-tetris"
+            "root": "apps/site",
+            "outputPath": "dist/apps/site"
           },
-          "configurations": {
-            "production": {}
-          }
+          "configurations": { "production": {} }
         },
         "serve": {
           "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "type-tetris:build",
-            "dev": true
-          },
+          "options": { "buildTarget": "site:build", "dev": true },
           "configurations": {
             "production": {
-              "buildTarget": "type-tetris:build:production",
+              "buildTarget": "site:build:production",
               "dev": false
             }
           }
         },
         "export": {
           "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "type-tetris:build:production"
-          }
+          "options": { "buildTarget": "site:build:production" }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/type-tetris"],
+          "outputs": ["coverage/apps/site"],
           "options": {
-            "jestConfig": "apps/type-tetris/jest.config.js",
+            "jestConfig": "apps/site/jest.config.js",
             "passWithNoTests": true
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/type-tetris/**/*.{ts,tsx,js,jsx}"]
-          }
-        }
-      }
-    },
-    "type-tetris-e2e": {
-      "root": "apps/type-tetris-e2e",
-      "sourceRoot": "apps/type-tetris-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/type-tetris-e2e/cypress.json",
-            "tsConfig": "apps/type-tetris-e2e/tsconfig.e2e.json",
-            "devServerTarget": "type-tetris:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "type-tetris:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/type-tetris-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/site/**/*.{ts,tsx,js,jsx}"]
           }
         }
       }
